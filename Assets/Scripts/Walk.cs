@@ -10,6 +10,8 @@ public class Walk : MonoBehaviour {
     Rigidbody rg;
     public GameObject player;
     public GameObject enemy;
+    public GameObject stamina;
+    Vector2 st;
     float speedWalk = 200f;
     float speedRound;
     bool turned = false;
@@ -21,16 +23,18 @@ public class Walk : MonoBehaviour {
         rg = player.GetComponent<Rigidbody>();
         joyButton = FindObjectOfType<JoyButton>();
         speedRound = speedWalk / 2;
+       
     }
 	
 	// Update is called once per frame
 	void Update () {
+        st = stamina.transform.localScale;
         float x = CrossPlatformInputManager.GetAxis("Horizontal");
         float y = CrossPlatformInputManager.GetAxis("Vertical");
         
         Vector3 direction = enemy.transform.position - player.transform.position;
         //Debug.Log(block);
-        if(!block && joyButton.Pressed)
+        if(!block && joyButton.Pressed && st.x > 0.05f)
         {
             block = true;
             
@@ -40,7 +44,7 @@ public class Walk : MonoBehaviour {
         if (block && joyButton.Pressed)
         {
 
-            Debug.Log(anim.IsPlaying("Skill"));
+            //Debug.Log(anim.IsPlaying("Skill"));
 
 
             if (!anim.IsPlaying("Skill"))
@@ -58,7 +62,7 @@ public class Walk : MonoBehaviour {
 
       
 
-        if (direction.magnitude < 10f && !block)
+        if (direction.magnitude < 10f && !block && st.x > 0.05f)
         {
             anim.Play("Attack");
         }

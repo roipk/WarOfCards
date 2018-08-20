@@ -10,40 +10,57 @@ public class HealthBar : MonoBehaviour {
     //public GameObject stamina;
     public GameObject stamina;
     Animation anim;
-    Vector2 temp;
+    Vector2 st;
     bool isAnimationPlay = false;
 
 	// Use this for initialization
 	void Start ()
     {
         anim = GetComponent<Animation>();
-        temp = stamina.transform.localScale;
+        st = stamina.transform.localScale;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if(!isAnimationPlay && anim.IsPlaying("Skill"))
+        st = stamina.transform.localScale;
+		if(!isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack")))
         {
             isAnimationPlay = true;
-            temp = stamina.transform.localScale;
-            if(temp.x>0.01)
-                temp.x-=0.2f*Time.deltaTime;
-            Debug.Log(temp.x);
-            stamina.transform.localScale = temp;
+            if (st.x > 0.01)
+            {
+                if (anim.IsPlaying("Attack"))
+                    st.x -= 0.04f * Time.deltaTime;
+                else
+                    st.x -= 0.2f * Time.deltaTime;
+            }
+            //Debug.Log(st.x);
+            stamina.transform.localScale = st;
+        }
+        if (isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack")))
+        {
+            if (st.x > 0.01)
+            {
+                if (anim.IsPlaying("Attack"))
+                    st.x -= 0.04f * Time.deltaTime;
+                else
+                    st.x -= 0.2f * Time.deltaTime;
+            }
+            stamina.transform.localScale = st;
+
         }
 
-        if(isAnimationPlay && !anim.IsPlaying("Attak"))
+        if(isAnimationPlay && (!anim.IsPlaying("Skill") || !anim.IsPlaying("Attack")))
         {
             isAnimationPlay = false;
             
         }
 
-        if (!isAnimationPlay && !anim.IsPlaying("Attak"))
+        if (!isAnimationPlay && (!anim.IsPlaying("Skill") || !anim.IsPlaying("Attack")))
         {
             
-            if (temp.x < 1)
-                temp.x += 0.02f * Time.deltaTime;
-            stamina.transform.localScale = temp;
+            if (st.x < 1)
+                st.x += 0.02f * Time.deltaTime;
+            stamina.transform.localScale = st;
         }
 
 	}
