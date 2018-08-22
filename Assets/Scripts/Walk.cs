@@ -4,94 +4,131 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class Walk : MonoBehaviour {
-    protected JoyButton joyButton;
+    public JoyButton joyButtonAttack;
+    public JoyButton joyButtonBlock;
 
     Animation anim;
     Rigidbody rg;
     public GameObject player;
     public GameObject enemy;
     public GameObject stamina;
+
     Vector2 st;
-    float speedWalk = 200f;
+    float speedWalk = 2f;
     float speedRound;
     bool turned = false;
     bool block = false;
+    bool attack = false;
+
+
+    float x = 0;
+    float y = 0;
+    float x2 = 0;
+    float y2 = 0;
 
     // Use this for initialization
     void Start () {
         anim = player.GetComponent<Animation>();
         rg = player.GetComponent<Rigidbody>();
-        joyButton = FindObjectOfType<JoyButton>();
-        speedRound = speedWalk / 2;
-       
+        speedRound = speedWalk/2;
+     //   targetq = Quaternion.Euler(0, (Mathf.Atan2(x, y) * Mathf.Rad2Deg), 0);
+
     }
 	
 	// Update is called once per frame
 	void Update () {
         st = stamina.transform.localScale;
-        float x = CrossPlatformInputManager.GetAxis("Horizontal");
-        float y = CrossPlatformInputManager.GetAxis("Vertical");
-        
+          x = CrossPlatformInputManager.GetAxisRaw("Horizontal");
+          y = CrossPlatformInputManager.GetAxisRaw("Vertical");
+        var w = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
+
         Vector3 direction = enemy.transform.position - player.transform.position;
-        //Debug.Log(block);
-        if(!block && joyButton.Pressed && st.x > 0.05f)
+
+        
+
+         if(!block && !attack&& joyButtonBlock.Pressed && st.x > 0.05f)
+         {
+             block = true;
+
+             anim.Play("Skill");
+         }
+        if (!block && !attack && joyButtonAttack.Pressed && st.x > 0.05f)
         {
-            block = true;
-            
-            anim.Play("Skill");
-        }
+            attack = true;
 
-        if (block && joyButton.Pressed)
-        {
-
-            //Debug.Log(anim.IsPlaying("Skill"));
-
-
-            if (!anim.IsPlaying("Skill"))
-                anim.Play("Idle");
-           
-            
-        }
-
-        if (block && !joyButton.Pressed)
-        {
-           // Debug.Log("test 2");
-            block = false;
-            //anim.Play("Block");
-        }
-
-      
-
-        if (direction.magnitude < 10f && !block && st.x > 0.05f)
-        {
             anim.Play("Attack");
         }
 
-        if (x != 0 && y != 0 && !block)
-        {
-            // turned = check(y, turned);
-            player.transform.Rotate(Vector3.up, x* speedRound * Time.deltaTime);
-           
-                rg.velocity = (player.transform.forward * speedWalk) *( y * Time.deltaTime);
+
+
+        if (block && joyButtonBlock.Pressed || attack && joyButtonAttack)
+         {
+
+             if (!anim.IsPlaying("Skill") && !anim.IsPlaying("Attack"))
+                 anim.Play("Idle");
+
+
+         }
+
+         if (block && !joyButtonBlock.Pressed)
+         {
+             block = false;
+         }
+
+        if (!anim.IsPlaying("Attack") && !joyButtonAttack.Pressed)
+         {
+             attack = false;
+         }
+
+        /*
+
+         if (direction.magnitude < 10f && !block && st.x > 0.05f)
+         {
+             anim.Play("Attack");
+         }*/
+
+         if (x != 0 && y != 0 && !block)
+         {
+
+          
+            player.transform.Translate(CrossPlatformInputManager.GetAxis("Horizontal")* speedWalk * Time.deltaTime, 0f, CrossPlatformInputManager.GetAxis("Vertical") * speedWalk* Time.deltaTime);
+            
+
         }
 
-        if (x!=0 || y != 0)
-        {
-            if (!anim.IsPlaying("Attack") && !block)
-                anim.Play("Walk");
-        }
+         if (x!=0 || y != 0)
+         {
+             if (!attack && !block)
+                 anim.Play("Walk");
+         }
+         else
+         {
+             if(!attack && !block)
+                 anim.Play("Idle");
+             rg.velocity = (player.transform.forward * 0f);
+
+         }
+
+
+
+
+        x2 = CrossPlatformInputManager.GetAxisRaw("Horizontal_2");
+        y2 = CrossPlatformInputManager.GetAxisRaw("Vertical_2");
+        float w2 = (Mathf.Atan2(x2, y2) * Mathf.Rad2Deg);
+        float t = 0;
+        if ((w2 > 90 && w2 <= 135) || (w2 > 0 && w2 <= 45) || (w2 < 180 && w >= 90) || (w2 <= 90 && w2 >= 45))
+            t = 0.1f;
+
+        else if ((w2 < -90 && w2 >= -135) || (w2 < 0 && w2 >= -45) || (w2 > -180 && w2 <= -135) || (w2 >= -90 && w2 <= -45))
+            t = -0.1f;
         else
-        {
-            if(!anim.IsPlaying("Attack") && !block)
-                anim.Play("Idle");
-            player.transform.Rotate(Vector3.up,0f);
-            rg.velocity = (player.transform.forward * 0f);
+            t = 0;
 
-        }
+        player.transform.Rotate(Vector3.up, speedRound * t * Time.deltaTime, Space.Self);
 
 
         
-        
-	}
+
+    }
 
 }

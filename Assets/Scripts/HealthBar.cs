@@ -12,6 +12,7 @@ public class HealthBar : MonoBehaviour {
     Animation anim;
     Vector2 st;
     bool isAnimationPlay = false;
+    bool isAnimationEnd = true;
 
 	// Use this for initialization
 	void Start ()
@@ -23,7 +24,8 @@ public class HealthBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         st = stamina.transform.localScale;
-		if(!isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack")))
+
+        if (!isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack")))
         {
             isAnimationPlay = true;
             if (st.x > 0.01)
@@ -36,6 +38,7 @@ public class HealthBar : MonoBehaviour {
             //Debug.Log(st.x);
             stamina.transform.localScale = st;
         }
+
         if (isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack")))
         {
             if (st.x > 0.01)
@@ -49,7 +52,7 @@ public class HealthBar : MonoBehaviour {
 
         }
 
-        if(isAnimationPlay && (!anim.IsPlaying("Skill") || !anim.IsPlaying("Attack")))
+        if (isAnimationPlay && (!anim.IsPlaying("Skill") || !anim.IsPlaying("Attack")))
         {
             isAnimationPlay = false;
             
@@ -62,6 +65,6 @@ public class HealthBar : MonoBehaviour {
                 st.x += 0.02f * Time.deltaTime;
             stamina.transform.localScale = st;
         }
-
-	}
+        
+    }
 }
