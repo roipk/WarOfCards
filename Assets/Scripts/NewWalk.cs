@@ -9,8 +9,8 @@ public class NewWalk : MonoBehaviour {
 
     public GameObject player;
     public GameObject test;
-    float speedWalk = 200f;
-    float speedRound;
+    float speedWalk = 2.0f;
+    float speedRound= 75.0f;
     //Rigidbody rg;
 
     protected JoyButton joyButton;
@@ -22,17 +22,17 @@ public class NewWalk : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        speedRound = speedWalk / 2;
+       /* speedRound = speedWalk / 2;
         joyButton = FindObjectOfType<JoyButton>();
         //rg = test.GetComponent<Rigidbody>();
         // target = Quaternion.Euler(0, (Mathf.Atan2(x, y) * Mathf.Rad2Deg), 0);
-
+        */
     }
 
     // Update is called once per frame
     void Update() {
         
-
+        /*
         x2 = CrossPlatformInputManager.GetAxisRaw("Horizontal_2");
         y2 = CrossPlatformInputManager.GetAxisRaw("Vertical_2");
         float w = (Mathf.Atan2(x2, y2) * Mathf.Rad2Deg);
@@ -48,7 +48,16 @@ public class NewWalk : MonoBehaviour {
                 
         test.transform.Rotate(Vector3.up,t, Space.Self);
           
-        
+        */
+
+
+        float translation = CrossPlatformInputManager.GetAxis("Vertical")*speedWalk;
+        float rotation = CrossPlatformInputManager.GetAxis("Horizontal")*speedRound;
+
+        translation *= Time.deltaTime;
+        rotation *= Time.deltaTime;
+        test.transform.Translate(0, 0, translation);
+        test.transform.Rotate(0, rotation, 0);
 
 
 
