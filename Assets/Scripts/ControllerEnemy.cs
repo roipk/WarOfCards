@@ -7,9 +7,11 @@ public class ControllerEnemy : MonoBehaviour {
     static Animator anim;
     public Transform player;
     public Slider hp;
+    Rigidbody rb;
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
@@ -23,13 +25,15 @@ public class ControllerEnemy : MonoBehaviour {
 
        // Debug.Log("direct = "+direction.magnitude);
         //Debug.Log("angle = "+angle);
+       
 
-        Vector3 relativePos = (player.position + new Vector3(0, 1f, 0))-transform.position;
-        //transform.rotation = Quaternion.LookRotation(direction);
+        Vector3 relativePos = (player.position + new Vector3(0, transform.position.y - player.position.y, 0))-transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion corrent = transform.localRotation;
         transform.localRotation = Quaternion.Slerp(corrent, rotation, Time.deltaTime);
-        //transform.Translate();
+        
+        //transform.localRotation.SetFromToRotation(relativePos,Vector3.zero);
+
         float angle = Vector3.Angle(relativePos, this.transform.forward);
 
         

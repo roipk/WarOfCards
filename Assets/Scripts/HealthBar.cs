@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour {
     public RectTransform  hp;
     //public GameObject player;
     //public GameObject stamina;
-    public GameObject stamina;
+    public Slider stamina;
     Animation anim;
     Vector2 st;
     bool isAnimationPlay = false;
@@ -38,7 +38,7 @@ public class HealthBar : MonoBehaviour {
     void Start()
     {
         anim = GetComponent<Animation>();
-        st = stamina.transform.localScale;
+        //st = stamina.transform.localScale;
     }
 
     // Update is called once per frame
@@ -50,15 +50,15 @@ public class HealthBar : MonoBehaviour {
         if (!isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack")) || anim.IsPlaying("Death"))
         {
             isAnimationPlay = true;
-            if (st.x > 0.01)
+            if (stamina.value > 5)
             {
                 if (anim.IsPlaying("Attack"))
-                    st.x -= 0.04f * Time.deltaTime;
+                    stamina.value -= 0.4f * Time.deltaTime;
                 else if (anim.IsPlaying("Skill"))
-                    st.x -= 0.2f * Time.deltaTime;
+                    stamina.value -= 1f * Time.deltaTime;
                 else
                 {
-                    st.x -= 0.04f;
+                    stamina.value -= 0.04f;
                     death = true;
                 }
             }
@@ -68,19 +68,19 @@ public class HealthBar : MonoBehaviour {
 
         if (isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack") || anim.IsPlaying("Death")))
         {
-            if (st.x > 0.01)
+            if (stamina.value > 5f)
             {
                 if (anim.IsPlaying("Attack"))
-                    st.x -= 0.04f * Time.deltaTime;
+                    stamina.value -= 0.4f * Time.deltaTime;
                 else if (anim.IsPlaying("Skill"))
-                    st.x -= 0.2f * Time.deltaTime;
+                    stamina.value -= 1f * Time.deltaTime;
                 else
                 {
                     st.x -= 0.04f;
                     
                 }
             }
-            stamina.transform.localScale = st;
+            //stamina.transform.localScale = st;
 
         }
 
@@ -94,9 +94,9 @@ public class HealthBar : MonoBehaviour {
             if (death)
                 Destroy(gameObject);
 
-            if (st.x < 1)
-                st.x += 0.02f * Time.deltaTime;
-            stamina.transform.localScale = st;
+            if (stamina.value < 5)
+                stamina.value += 0.2f * Time.deltaTime;
+           // stamina.transform.localScale = st;
         }
 /*
         if(st.x<0.05)
