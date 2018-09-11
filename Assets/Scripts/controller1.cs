@@ -30,6 +30,7 @@ public class controller1 : MonoBehaviour {
     // Update is called once per frame
      void Update() {
 
+        act();
         if (counter >= 5)
             this.enabled = false;
 
@@ -44,38 +45,15 @@ public class controller1 : MonoBehaviour {
                 moveVector = PoolInput();
             if (moveVector.x != 0 || moveVector.z != 0)
             {
-                anim.SetBool("isStand", false);
                 Rotation();
                 Move();
             }
             else
             {
-                if (enemy != null)
-                {
-                    //Debug.Log(Vector3.Distance(enemy.position, this.transform.position));
-                    if (Vector3.Distance(enemy.position, this.transform.position) < 15f)
-                    {
-                        anim.SetBool("isWalking", false);
-                        anim.SetBool("isDamaged", false);
-                        anim.SetBool("isIdle", false);
-                         //Debug.Log("in");
-                        /*
-
-                         // transform.localRotation= Quaternion.LookRotation(enemy.position);
-                           anim.SetBool("isStand", true);
-
-                           Vector3 relativePos = (enemy.position + new Vector3(0f, transform.position.y - enemy.position.y, 0f)) - transform.position;
-                      relativePos. *= -1;
-                           Quaternion rotation = Quaternion.LookRotation(relativePos);
-                           Quaternion corrent = transform.localRotation;
-                           transform.localRotation = Quaternion.Slerp(corrent, rotation, Time.deltaTime);
-
-                      */
-                    }
-
-                }
+                anim.SetBool("isWalking", false);
+                
             }
-            act();
+           
         }
     }
 
@@ -237,6 +215,7 @@ public class controller1 : MonoBehaviour {
         else
             anim.SetBool("isBlocking", false);
               
+         
          
         
     }
