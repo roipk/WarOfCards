@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class controller1 : MonoBehaviour {
     static Animator anim;
@@ -9,32 +11,81 @@ public class controller1 : MonoBehaviour {
     public JoyButton joyButtonBlock;
     public float speed = 15.0f;
     public float rotationSpeed = 5.0f;
-
+    public Transform enemy;
+    private bool sideEnemy = false;
+    Vector3 relativePos;
+    public Slider hp;
+    public GameObject sward;
     public PlayerController controllerJoystic;
     public Vector3 moveVector { set; get; }
-    
 
+    float counter;
     void Start() {
         anim = GetComponent<Animator>();
-       
+        relativePos = new Vector3(0f, 0f, -1f);
+        counter = 0;
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(enemy.position), Time.deltaTime);
     }
 
     // Update is called once per frame
      void Update() {
 
-        moveVector = PoolInput();
-        Rotation();
-        Move();
+        if (counter >= 5)
+            this.enabled = false;
 
-      }
+        if (hp.value <= 0)
+        {
+            counter += 1 * Time.deltaTime;
+            return;
+        }
+        else
+        {
+            //relativePos = Vector3.forward;
+                moveVector = PoolInput();
+            if (moveVector.x != 0 || moveVector.z != 0)
+            {
+                anim.SetBool("isStand", false);
+                Rotation();
+                Move();
+            }
+            else
+            {
+                if (enemy != null)
+                {
+                    //Debug.Log(Vector3.Distance(enemy.position, this.transform.position));
+                    if (Vector3.Distance(enemy.position, this.transform.position) < 15f)
+                    {
+                        anim.SetBool("isWalking", false);
+                        anim.SetBool("isDamaged", false);
+                        anim.SetBool("isIdle", false);
+                         //Debug.Log("in");
+                        /*
+
+                         // transform.localRotation= Quaternion.LookRotation(enemy.position);
+                           anim.SetBool("isStand", true);
+
+                           Vector3 relativePos = (enemy.position + new Vector3(0f, transform.position.y - enemy.position.y, 0f)) - transform.position;
+                      relativePos. *= -1;
+                           Quaternion rotation = Quaternion.LookRotation(relativePos);
+                           Quaternion corrent = transform.localRotation;
+                           transform.localRotation = Quaternion.Slerp(corrent, rotation, Time.deltaTime);
+
+                      */
+                    }
+
+                }
+            }
+            act();
+        }
+    }
 
 
     private void Rotation()
     {
-        Vector3 relativePos = new Vector3(0f, 0f, 0f);
-        
-         //top to left
-         if (moveVector.x == 0 && moveVector.z > 0)
+          
+
+            //top to left
+            if (moveVector.x == 0 && moveVector.z > 0)
             relativePos = new Vector3(0f, 0f, -1f);
         if (moveVector.x >= -0.1 && moveVector.x < 0 && moveVector.z > 0)
              relativePos = new Vector3(0.1f, 0f, -0.9f);
@@ -145,25 +196,17 @@ public class controller1 : MonoBehaviour {
 
 
 
+            
 
+       
 
-        Debug.Log(moveVector);
+       
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion corrent = transform.localRotation;
         transform.localRotation = Quaternion.Slerp(corrent, rotation, Time.deltaTime*rotationSpeed);
     }
     private void Move()
     {
-                if (joyButtonAttack.Pressed)
-                      anim.SetBool("isAttack", true);
-
-                  else
-                      anim.SetBool("isAttack", false);
-
-                  if (joyButtonBlock.Pressed)
-                      anim.SetBool("isBlocking", true);
-                  else
-                      anim.SetBool("isBlocking", false);
                   if(moveVector.x != 0 || moveVector.z != 0)
                   {
                     this.transform.Translate(0f, 0f, speed*Time.deltaTime);
@@ -173,6 +216,29 @@ public class controller1 : MonoBehaviour {
                   {
                       anim.SetBool("isWalking", false);
                   }
+    }
+
+
+    private void act()
+    {
+        
+        if (joyButtonAttack.Pressed)
+        {
+            
+            anim.SetBool("isAttack", true);
+        }
+
+        else
+        {
+            anim.SetBool("isAttack", false);
+        }
+        if (joyButtonBlock.Pressed)
+            anim.SetBool("isBlocking", true);
+        else
+            anim.SetBool("isBlocking", false);
+              
+         
+        
     }
 
     private Vector3 PoolInput()

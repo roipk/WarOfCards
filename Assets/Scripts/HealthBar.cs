@@ -6,55 +6,90 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
-    public RectTransform  hp;
+    public Slider hp;
     //public GameObject player;
     //public GameObject stamina;
     public Slider stamina;
-    Animation anim;
-    Vector2 st;
-    bool isAnimationPlay = false;
-    bool isAnimationEnd = true;
+    Animator anim;
+    //Vector2 st;
+    //bool isAnimationPlay = false;
+    //bool isAnimationEnd = true;
     float damag;
     bool death = false;
     float x = 1f;
-
-
+    
 
 
 
     private void OnTriggerEnter(Collider other)
     {
-        x -= 0.01f;
+        Animator enemyAnim = other.GetComponentInParent<Animator>();
+        //xDebug.Log(this.gameObject.tag + " attack  = "+ !enemyAnim.GetBool("isAttack"));
+        if (other.gameObject.tag != this.gameObject.tag && !enemyAnim.GetBool("isAttack"))
+            return;
 
-        hp.localScale = new Vector3(x, 1f, 1f);
-    } 
+        hp.value -= 10f;
+        anim.SetBool("isDamaged", true);
+        if (hp.value <= 0)
+        {
+            anim.SetBool("isDead", true);
+        }
+        
+    }
 
-
-
-
-
-
-    // Use this for initialization
-    void Start()
+    private void OnTriggerExit(Collider other)
     {
-        anim = GetComponent<Animation>();
+        Animator enemyAnim = other.GetComponentInParent<Animator>();
+        if (!enemyAnim.GetBool("isAttack"))
+        {
+
+            anim.SetBool("isDamaged", false);
+            // anim.SetBool("isBack", true);
+            anim.SetBool("isAttack", false);
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isIdle", false);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
+        }
+        if (!enemyAnim.GetBool("isDead"))
+        {
+            anim.SetBool("isWin", false);
+            anim.SetBool("isDamaged", false);
+            anim.SetBool("isBack", false);
+            anim.SetBool("isAttack", false);
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isIdle", false);
+        }
+
+
+    }
+
+
+
+
+        // Use this for initialization
+        void Start()
+    {
+        anim = GetComponent<Animator>();
+       // enemyAnim = enemy.GetComponent<Animator>();
         //st = stamina.transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
 
 
+        /*
         //st = stamina.transform.localScale;
-        if (!isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack")) || anim.IsPlaying("Death"))
+        if (!isAnimationPlay && (anim.IsPlaying("Block") || anim.IsPlaying("Attack")))// || anim.IsPlaying("Death"))
         {
             isAnimationPlay = true;
             if (stamina.value > 5)
             {
                 if (anim.IsPlaying("Attack"))
                     stamina.value -= 0.4f * Time.deltaTime;
-                else if (anim.IsPlaying("Skill"))
+                else if (anim.IsPlaying("Block"))
                     stamina.value -= 1f * Time.deltaTime;
                 else
                 {
@@ -65,14 +100,14 @@ public class HealthBar : MonoBehaviour {
             //Debug.Log(st.x);
             stamina.transform.localScale = st;
         }
-
-        if (isAnimationPlay && (anim.IsPlaying("Skill") || anim.IsPlaying("Attack") || anim.IsPlaying("Death")))
+        
+        if (isAnimationPlay && (anim.IsPlaying("Block") || anim.IsPlaying("Attack") ))//|| anim.IsPlaying("Death")))
         {
             if (stamina.value > 5f)
             {
                 if (anim.IsPlaying("Attack"))
                     stamina.value -= 0.4f * Time.deltaTime;
-                else if (anim.IsPlaying("Skill"))
+                else if (anim.IsPlaying("Block"))
                     stamina.value -= 1f * Time.deltaTime;
                 else
                 {
@@ -84,12 +119,12 @@ public class HealthBar : MonoBehaviour {
 
         }
 
-        if (isAnimationPlay && (!anim.IsPlaying("Skill") || !anim.IsPlaying("Attack") || anim.IsPlaying("Death")))
+        if (isAnimationPlay && (!anim.IsPlaying("Block") || !anim.IsPlaying("Attack")  ))// || anim.IsPlaying("Death")))
         {
             isAnimationPlay = false;
         }
 
-        if (!isAnimationPlay && (!anim.IsPlaying("Skill") || !anim.IsPlaying("Attack") || !anim.IsPlaying("Death")))
+        if (!isAnimationPlay && (!anim.IsPlaying("Block") || !anim.IsPlaying("Attack") ))//|| !anim.IsPlaying("Death")))
         {
             if (death)
                 Destroy(gameObject);

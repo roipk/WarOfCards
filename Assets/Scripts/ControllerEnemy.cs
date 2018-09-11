@@ -6,62 +6,123 @@ using UnityEngine.UI;
 public class ControllerEnemy : MonoBehaviour {
     static Animator anim;
     public Transform player;
-    public Slider hp;
+    public GameObject hp;
     Rigidbody rb;
+    //public GameObject character;
+    bool attack = false;
+    float counter;
+    
+
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        counter = 0;
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(player.position), Time.deltaTime);
     }
 	
 	// Update is called once per frame
 	void Update () {
+        Animator win = player.gameObject.GetComponent<Animator>();
+        if (win.GetBool("isDead"))
+        {
 
-        if (hp.value <= 0)
+            anim.SetBool("isWin", true);
+            anim.SetBool("isDamaged", false);
+            anim.SetBool("isBack", false);
+            anim.SetBool("isAttack", false);
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isIdle", false);
             return;
+        }
 
-      //  Vector3 direction = player.position - this.transform.position;
 
 
-       // Debug.Log("direct = "+direction.magnitude);
-        //Debug.Log("angle = "+angle);
-       
+        if ((int)counter > 5)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else if (hp.transform.localScale.y<=0)
+        {
+           // Debug.Log((int)counter);
+            counter += 1 * Time.deltaTime;
+            return;
+        }
+        else
+        {
+            Move();
+        }
 
-        Vector3 relativePos = (player.position + new Vector3(0, transform.position.y - player.position.y, 0))-transform.position;
+    }
+
+
+    
+    private void Move()
+    {
+        Vector3 relativePos = (player.position + new Vector3(0, transform.position.y - player.position.y, 0)) - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion corrent = transform.localRotation;
+
+       // float angle = Vector3.Angle(relativePos, this.transform.forward);
         transform.localRotation = Quaternion.Slerp(corrent, rotation, Time.deltaTime);
-        
-        //transform.localRotation.SetFromToRotation(relativePos,Vector3.zero);
-
-        float angle = Vector3.Angle(relativePos, this.transform.forward);
 
         
-        if (Vector3.Distance(player.position, this.transform.position) < 20f && angle < 30f)
+        anim.SetBool("isIdle", false);
+       // Debug.Log()
+        //Debug.Log("meter    " + Vector3.Distance(player.position, this.transform.position) + "        angle = " + angle);
+        float distane = Vector3.Distance(player.position, this.transform.position);
+        if (distane < 25f)
         {
-            //direction.x = 0f;
-            //direction.z = 0f;
-            // this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-            //transform.rotation = Quaternion.LookRotation(direction);
-
-
-            if (relativePos.magnitude > 8f)
+           if (anim.GetBool("isBack"))
             {
+               // Debug.Log("in");
+                anim.SetBool("isWalking", false);
+                anim.SetBool("isAttack", false);
+                this.transform.Translate(0f, 0f, -0.05f);
+            }
+
+           if (distane > 13f)
+            {
+               // Debug.Log("in distane > 13");
+                this.transform.Translate(0f, 0f, 0.05f);
+                anim.SetBool("isBack", false);
+                anim.SetBool("isWalking", true);
+                anim.SetBool("isAttack", false);
+            }
+            else if (distane >= 6f && !anim.GetBool("isBack"))
+            {
+              
+
+                //Debug.Log("in distane > 8");
+                //Debug.Log("in walke meter    " + relativePos.magnitude);
                 this.transform.Translate(0f, 0f, 0.05f);
                 anim.SetBool("isWalking", true);
+                anim.SetBool("isAttack", false);
+               /* anim.SetBool("isIdle", false);
+                anim.SetBool("isBack", false);
+                    attack = false;*/
             }
             else
             {
                 anim.SetBool("isAttack", true);
+                attack = true;
             }
+                
+
         }
+            
+
+        
         else
         {
+            //Debug.Log("in");
             anim.SetBool("isIdle", true);
             anim.SetBool("isAttack", false);
             anim.SetBool("isWalking", false);
         }
     }
+
 
 }
