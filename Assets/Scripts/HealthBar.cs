@@ -50,15 +50,7 @@ public class HealthBar : MonoBehaviour {
             anim.SetBool("isIdle", false);
             //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
         }
-        if (!enemyAnim.GetBool("isDead"))
-        {
-            anim.SetBool("isWin", false);
-            anim.SetBool("isDamaged", false);
-            anim.SetBool("isBack", false);
-            anim.SetBool("isAttack", false);
-            anim.SetBool("isWalking", false);
-            anim.SetBool("isIdle", false);
-        }
+       
 
 
     }
