@@ -14,6 +14,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
     GameObject vbBtnExit;
     GameObject vbBtnYes;
     GameObject vbBtnNo;
+    GameObject exitGame;
     GameObject exitYes;
     GameObject exitNo;
     GameObject question;
@@ -38,6 +39,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
         vbBtnNo.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
 
 
+        exitGame = GameObject.Find("ExitGame");
         exitYes = GameObject.Find("ExitYes");
         exitNo = GameObject.Find("ExitNo");
         startbtn.active = true;
@@ -59,11 +61,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
 
 	// Update is called once per frame
 	void Update () {
-		if(!player.active && !gameObject.active)
-        {
-            startbtn.active = true;
-            start = false;
-        }
+		
 	}
 
 
@@ -78,7 +76,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
             
         }
         if (vb.gameObject.name == "VirtualButtonQuit")
-            vbBtnExit.active = false;
+            exitGame.active = false;
 
         if (vb.gameObject.name == "VirtualButtonQuitYes")
             exitYes.active = false;
@@ -106,7 +104,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
         if(vb.gameObject.name == "VirtualButtonQuit")
         {
             exit = true;
-            vbBtnExit.active = true;
+            exitGame.active = true;
             exitYes.active = true;
             exitNo.active = true;
             question.active = true;
