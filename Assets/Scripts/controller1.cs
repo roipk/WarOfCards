@@ -60,125 +60,119 @@ public class controller1 : MonoBehaviour {
 
     private void Rotation()
     {
-          
 
+        
             //top to left
             if (moveVector.x == 0 && moveVector.z > 0)
-            relativePos = new Vector3(0f, 0f, -1f);
+                 relativePos = new Vector3(0f, 0f, 1f);
         if (moveVector.x >= -0.1 && moveVector.x < 0 && moveVector.z > 0)
-             relativePos = new Vector3(0.1f, 0f, -0.9f);
+                 relativePos = new Vector3(-0.1f, 0f, 0.9f);
          if (moveVector.x >= -0.2 && moveVector.x < -0.1 && moveVector.z > 0)
-             relativePos = new Vector3(0.2f, 0f, -0.8f);
+                 relativePos = new Vector3(-0.2f, 0f, 0.8f);
          if (moveVector.x >= -0.3 && moveVector.x < -0.2 && moveVector.z > 0)
-             relativePos = new Vector3(0.3f, 0f, -0.7f);
+                 relativePos = new Vector3(-0.3f, 0f, 0.7f);
          if (moveVector.x >= -0.4 && moveVector.x < -0.3 && moveVector.z > 0)
-             relativePos = new Vector3(0.4f, 0f, -0.6f);
+                 relativePos = new Vector3(-0.4f, 0f, 0.6f);
          if (moveVector.x >= -0.5 && moveVector.x < -0.4 && moveVector.z > 0)
-             relativePos = new Vector3(0.5f, 0f, -0.5f);
+                 relativePos = new Vector3(-0.5f, 0f, 0.5f);
          if (moveVector.x >= -0.6 && moveVector.x < -0.5 && moveVector.z > 0)
-             relativePos = new Vector3(0.6f, 0f, -0.4f);
+                 relativePos = new Vector3(-0.6f, 0f, 0.4f);
          if (moveVector.x >= -0.7 && moveVector.x < -0.6 && moveVector.z > 0)
-             relativePos = new Vector3(0.7f, 0f, -0.3f);
+                 relativePos = new Vector3(-0.7f, 0f, 0.3f);
          if (moveVector.x >= -0.8 && moveVector.x < -0.7 && moveVector.z > 0)
-             relativePos = new Vector3(0.8f, 0f, -0.2f);
+                 relativePos = new Vector3(-0.8f, 0f, 0.2f);
          if (moveVector.x >= -0.9 && moveVector.x < -0.8 && moveVector.z > 0)
-             relativePos = new Vector3(0.9f, 0f, -0.1f);
+                 relativePos = new Vector3(-0.9f, 0f, 0.1f);
          if (moveVector.x >= -1 && moveVector.x < -0.9 && moveVector.z > 0)
-             relativePos = new Vector3(1f, 0f, 0f);
-
-
-             //top to right 
-             if (moveVector.x == 0 && moveVector.z > 0)
-                 relativePos = new Vector3(0f, 0f, -1f);
-            if (moveVector.x > 0 && moveVector.x < 0.1 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.1f, 0f, -0.9f);
-             if (moveVector.x > 0.1 && moveVector.x <= 0.2 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.2f, 0f, -0.8f);
-             if (moveVector.x > 0.2 && moveVector.x <= 0.3 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.3f, 0f, -0.7f);
-             if (moveVector.x > 0.3 && moveVector.x <= 0.4 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.4f, 0f, -0.6f);
-             if (moveVector.x > 0.4 && moveVector.x <= 0.5 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.5f, 0f, -0.5f);
-             if (moveVector.x > 0.5 && moveVector.x <= 0.6 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.6f, 0f, -0.4f);
-             if (moveVector.x > 0.6 && moveVector.x <= 0.7 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.7f, 0f, -0.3f);
-             if (moveVector.x > 0.7 && moveVector.x <= 0.8 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.8f, 0f, -0.2f);
-             if (moveVector.x > 0.8 && moveVector.x <= 0.9 && moveVector.z > 0)
-                 relativePos = new Vector3(-0.9f, 0f, -0.1f);
-             if (moveVector.x > 0.9 && moveVector.x <= 1 && moveVector.z > 0)
                  relativePos = new Vector3(-1f, 0f, 0f);
-
-
-
-
-
-
-
 
 
              //botton to right 
              if (moveVector.x == 0 && moveVector.z < 0)
-                 relativePos = new Vector3(0f, 0f, 1f);
+            relativePos = new Vector3(0f, 0f, -1f);
             if (moveVector.x > 0 && moveVector.x <= 0.1 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.1f, 0f, 0.9f);
+             relativePos = new Vector3(0.1f, 0f, -0.9f);
              if (moveVector.x > 0.1 && moveVector.x <= 0.2 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.2f, 0f, 0.8f);
+             relativePos = new Vector3(0.2f, 0f, -0.8f);
              if (moveVector.x > 0.2 && moveVector.x <= 0.3 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.3f, 0f, 0.7f);
+             relativePos = new Vector3(0.3f, 0f, -0.7f);
              if (moveVector.x > 0.3 && moveVector.x <= 0.4 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.4f, 0f, 0.6f);
+             relativePos = new Vector3(0.4f, 0f, -0.6f);
              if (moveVector.x > 0.4 && moveVector.x <= 0.5 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.5f, 0f, 0.5f);
+             relativePos = new Vector3(0.5f, 0f, -0.5f);
              if (moveVector.x > 0.5 && moveVector.x <= 0.6 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.6f, 0f, 0.4f);
+             relativePos = new Vector3(0.6f, 0f, -0.4f);
              if (moveVector.x > 0.6 && moveVector.x <= 0.7 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.7f, 0f, 0.3f);
+             relativePos = new Vector3(0.7f, 0f, -0.3f);
              if (moveVector.x > 0.7 && moveVector.x <= 0.8 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.8f, 0f, 0.2f);
+             relativePos = new Vector3(0.8f, 0f, -0.2f);
              if (moveVector.x > 0.8 && moveVector.x <= 0.9 && moveVector.z < 0)
-                 relativePos = new Vector3(-0.9f, 0f, 0.1f);
+             relativePos = new Vector3(0.9f, 0f, -0.1f);
             if (moveVector.x > 0.9 && moveVector.x <= 1 && moveVector.z < 0)
-                 relativePos = new Vector3(-1f, 0f, 0f);
+             relativePos = new Vector3(1f, 0f, 0f);
 
 
 
 
 
 
-             //botton to left
-             if (moveVector.x == 0 && moveVector.z < 0)
+
+
+
+        //top to right 
+        if (moveVector.x == 0 && moveVector.z > 0)
                  relativePos = new Vector3(0f, 0f, 1f);
-            if (moveVector.x >= -0.1 && moveVector.x < 0 && moveVector.z < 0)
+        if (moveVector.x > 0 && moveVector.x < 0.1 && moveVector.z > 0)
                  relativePos = new Vector3(0.1f, 0f, 0.9f);
-             if (moveVector.x >= -0.2 && moveVector.x < -0.1 && moveVector.z < 0)
+        if (moveVector.x > 0.1 && moveVector.x <= 0.2 && moveVector.z > 0)
                  relativePos = new Vector3(0.2f, 0f, 0.8f);
-             if (moveVector.x >= -0.3 && moveVector.x < -0.2 && moveVector.z < 0)
+        if (moveVector.x > 0.2 && moveVector.x <= 0.3 && moveVector.z > 0)
                  relativePos = new Vector3(0.3f, 0f, 0.7f);
-             if (moveVector.x >= -0.4 && moveVector.x < -0.3 && moveVector.z < 0)
+        if (moveVector.x > 0.3 && moveVector.x <= 0.4 && moveVector.z > 0)
                  relativePos = new Vector3(0.4f, 0f, 0.6f);
-             if (moveVector.x >= -0.5 && moveVector.x < -0.4 && moveVector.z < 0)
+        if (moveVector.x > 0.4 && moveVector.x <= 0.5 && moveVector.z > 0)
                  relativePos = new Vector3(0.5f, 0f, 0.5f);
-             if (moveVector.x >= -0.6 && moveVector.x < -0.5 && moveVector.z < 0)
+        if (moveVector.x > 0.5 && moveVector.x <= 0.6 && moveVector.z > 0)
                  relativePos = new Vector3(0.6f, 0f, 0.4f);
-             if (moveVector.x >= -0.7 && moveVector.x < -0.6 && moveVector.z < 0)
+        if (moveVector.x > 0.6 && moveVector.x <= 0.7 && moveVector.z > 0)
                  relativePos = new Vector3(0.7f, 0f, 0.3f);
-             if (moveVector.x >= -0.8 && moveVector.x < -0.7 && moveVector.z < 0)
+        if (moveVector.x > 0.7 && moveVector.x <= 0.8 && moveVector.z > 0)
                  relativePos = new Vector3(0.8f, 0f, 0.2f);
-             if (moveVector.x >= -0.9 && moveVector.x < -0.8 && moveVector.z < 0)
+        if (moveVector.x > 0.8 && moveVector.x <= 0.9 && moveVector.z > 0)
                  relativePos = new Vector3(0.9f, 0f, 0.1f);
-            if (moveVector.x >= -1 && moveVector.x < -0.9 && moveVector.z < 0)
+        if (moveVector.x > 0.9 && moveVector.x <= 1 && moveVector.z > 0)
                  relativePos = new Vector3(1f, 0f, 0f);
 
+        //botton to left
+        if (moveVector.x == 0 && moveVector.z < 0)
+            relativePos = new Vector3(0f, 0f, -1f);
+        if (moveVector.x >= -0.1 && moveVector.x < 0 && moveVector.z < 0)
+            relativePos = new Vector3(-0.1f, 0f, -0.9f);
+        if (moveVector.x >= -0.2 && moveVector.x < -0.1 && moveVector.z < 0)
+            relativePos = new Vector3(-0.2f, 0f, -0.8f);
+        if (moveVector.x >= -0.3 && moveVector.x < -0.2 && moveVector.z < 0)
+            relativePos = new Vector3(-0.3f, 0f, -0.7f);
+        if (moveVector.x >= -0.4 && moveVector.x < -0.3 && moveVector.z < 0)
+            relativePos = new Vector3(-0.4f, 0f, -0.6f);
+        if (moveVector.x >= -0.5 && moveVector.x < -0.4 && moveVector.z < 0)
+            relativePos = new Vector3(-0.5f, 0f, -0.5f);
+        if (moveVector.x >= -0.6 && moveVector.x < -0.5 && moveVector.z < 0)
+            relativePos = new Vector3(-0.6f, 0f, -0.4f);
+        if (moveVector.x >= -0.7 && moveVector.x < -0.6 && moveVector.z < 0)
+            relativePos = new Vector3(-0.7f, 0f, -0.3f);
+        if (moveVector.x >= -0.8 && moveVector.x < -0.7 && moveVector.z < 0)
+            relativePos = new Vector3(-0.8f, 0f, -0.2f);
+        if (moveVector.x >= -0.9 && moveVector.x < -0.8 && moveVector.z < 0)
+            relativePos = new Vector3(-0.9f, 0f, -0.1f);
+        if (moveVector.x >= -1 && moveVector.x < -0.9 && moveVector.z < 0)
+            relativePos = new Vector3(-1f, 0f, 0f);
 
 
-            
 
-       
 
-       
+
+
+
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion corrent = transform.localRotation;
         transform.localRotation = Quaternion.Slerp(corrent, rotation, Time.deltaTime*rotationSpeed);

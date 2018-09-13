@@ -23,6 +23,9 @@ public class ControllerEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+       
+
+        
         Animator win = player.gameObject.GetComponent<Animator>();
         if (win.GetBool("isDead"))
         {
@@ -53,7 +56,7 @@ public class ControllerEnemy : MonoBehaviour {
         {
             Move();
         }
-
+        
     }
 
 

@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour {
     //Vector2 st;
     //bool isAnimationPlay = false;
     //bool isAnimationEnd = true;
-    float damag;
+    //float damag;
     bool death = false;
     float x = 1f;
     
@@ -23,9 +23,9 @@ public class HealthBar : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Animator enemyAnim = other.GetComponentInParent<Animator>();
         //xDebug.Log(this.gameObject.tag + " attack  = "+ !enemyAnim.GetBool("isAttack"));
-        if (other.gameObject.tag != this.gameObject.tag && !enemyAnim.GetBool("isAttack"))
+        Animator enemyAnim = other.GetComponentInParent<Animator>();
+        if (!enemyAnim.GetBool("isAttack"))
             return;
 
         hp.value -= 10f;
@@ -39,8 +39,8 @@ public class HealthBar : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        Animator enemyAnim = other.GetComponentInParent<Animator>();
-        if (!enemyAnim.GetBool("isAttack"))
+         Animator enemyAnim = other.GetComponentInParent<Animator>();
+        if (other.gameObject.tag != this.gameObject.tag)
         {
 
             anim.SetBool("isDamaged", false);
