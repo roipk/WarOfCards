@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class SceneLoader : MonoBehaviour {
+#pragma warning disable CS0618 // Type or member is obsolete
 
 	void OnGUI()
 	{
@@ -14,8 +15,8 @@ public class SceneLoader : MonoBehaviour {
 
 	void LoadPreScene()
 	{
-		int nextLevel = Application.loadedLevel + 1;
-		if( nextLevel <= 1)
+        int nextLevel = Application.loadedLevel + 1;
+        if ( nextLevel <= 1)
 			nextLevel = Application.levelCount;
 
 		Application.LoadLevel(nextLevel);
@@ -30,4 +31,5 @@ public class SceneLoader : MonoBehaviour {
 		Application.LoadLevel(nextLevel);
 
 	}
+#pragma warning restore CS0618 // Type or member is obsolete
 }

@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class HealthBar : MonoBehaviour {
 
     public Slider hp;
-    //public GameObject player;
-    //public GameObject stamina;
     public Slider stamina;
     Animator anim;
-    //Vector2 st;
-    //bool isAnimationPlay = false;
-    //bool isAnimationEnd = true;
-    //float damag;
-    bool death = false;
-    float x = 1f;
+    Animator enemyAnim;
+//    bool death = false;
+    //float x = 1f;
     
-
+     
 
 
     private void OnTriggerEnter(Collider other)
     {
-        //xDebug.Log(this.gameObject.tag + " attack  = "+ !enemyAnim.GetBool("isAttack"));
-        Animator enemyAnim = other.GetComponentInParent<Animator>();
+
+      
+         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Untagged" )
+            return; 
+        //const string V = "      attack  = ";
+        enemyAnim = other.GetComponentInParent<Animator>();
         if (!enemyAnim.GetBool("isAttack"))
+        {
             return;
+        }
 
         hp.value -= 10f;
         anim.SetBool("isDamaged", true);
@@ -34,13 +34,17 @@ public class HealthBar : MonoBehaviour {
         {
             anim.SetBool("isDead", true);
         }
-        
+       
     }
 
     private void OnTriggerExit(Collider other)
     {
-         Animator enemyAnim = other.GetComponentInParent<Animator>();
-        if (other.gameObject.tag != this.gameObject.tag)
+        
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Untagged")
+            return;
+
+        enemyAnim = other.GetComponentInParent<Animator>();
+        if (other.gameObject.tag != gameObject.tag)
         {
 
             anim.SetBool("isDamaged", false);
@@ -50,16 +54,14 @@ public class HealthBar : MonoBehaviour {
             anim.SetBool("isIdle", false);
             //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
         }
-       
-
-
+        
     }
 
 
 
 
-        // Use this for initialization
-        void Start()
+    // Use this for initialization
+    void Start()
     {
         anim = GetComponent<Animator>();
        // enemyAnim = enemy.GetComponent<Animator>();

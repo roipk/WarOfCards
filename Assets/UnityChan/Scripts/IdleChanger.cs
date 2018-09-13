@@ -13,6 +13,7 @@ using System.Collections;
 
 public class IdleChanger : MonoBehaviour
 {
+#pragma warning disable CS0618 // Type or member is obsolete
 	
 	private Animator anim;						// Animatorへの参照
 	private AnimatorStateInfo currentState;		// 現在のステート状態を保存する参照
@@ -54,8 +55,9 @@ public class IdleChanger : MonoBehaviour
 		if (anim.GetBool ("Next")) {
 			// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
 			currentState = anim.GetCurrentAnimatorStateInfo (0);
-			if (previousState.nameHash != currentState.nameHash) {
-				anim.SetBool ("Next", false);
+            if (previousState.nameHash != currentState.nameHash)
+            {
+                anim.SetBool ("Next", false);
 				previousState = currentState;				
 			}
 		}
@@ -103,4 +105,5 @@ public class IdleChanger : MonoBehaviour
 
 	}
 
+#pragma warning restore CS0618 // Type or member is obsolete
 }

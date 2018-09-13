@@ -12,7 +12,7 @@ public class controller1 : MonoBehaviour {
     public float speed = 15.0f;
     public float rotationSpeed = 5.0f;
     public Transform enemy;
-    private bool sideEnemy = false;
+//    private bool sideEnemy = false;
     Vector3 relativePos;
     public Slider hp;
     public GameObject sward;

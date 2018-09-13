@@ -7,6 +7,8 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
     [InitializeOnLoad]
     public class CrossPlatformInitialize
     {
+#pragma warning disable CS0618 // Type or member is obsolete
+
         // Custom compiler defines:
         //
         // CROSS_PLATFORM_INPUT : denotes that cross platform input package exists, so that other packages can use their CrossPlatformInput functions.
@@ -134,4 +136,6 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
             return new List<string>(PlayerSettings.GetScriptingDefineSymbolsForGroup(group).Split(';'));
         }
     }
+#pragma warning restore CS0618 // Type or member is obsolete
+
 }

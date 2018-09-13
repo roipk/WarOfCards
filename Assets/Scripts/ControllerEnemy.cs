@@ -7,7 +7,7 @@ public class ControllerEnemy : MonoBehaviour {
     static Animator anim;
     public Transform player;
     public GameObject hp;
-    Rigidbody rb;
+//    Rigidbody rb;
     //public GameObject character;
     bool attack = false;
     float counter;
@@ -16,7 +16,7 @@ public class ControllerEnemy : MonoBehaviour {
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         counter = 0;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(player.position), Time.deltaTime);
     }
@@ -84,6 +84,7 @@ public class ControllerEnemy : MonoBehaviour {
                 anim.SetBool("isWalking", false);
                 anim.SetBool("isAttack", false);
                 this.transform.Translate(0f, 0f, -0.05f);
+                attack = false;
             }
 
            if (distane > 13f)
@@ -93,10 +94,12 @@ public class ControllerEnemy : MonoBehaviour {
                 anim.SetBool("isBack", false);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttack", false);
+                attack = true;
+
             }
             else if (distane >= 6f && !anim.GetBool("isBack"))
             {
-              
+                attack = true;
 
                 //Debug.Log("in distane > 8");
                 //Debug.Log("in walke meter    " + relativePos.magnitude);
@@ -109,8 +112,9 @@ public class ControllerEnemy : MonoBehaviour {
             }
             else
             {
+                if(attack)
                 anim.SetBool("isAttack", true);
-                attack = true;
+                //attack = true;
             }
                 
 

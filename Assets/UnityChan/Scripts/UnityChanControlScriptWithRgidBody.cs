@@ -5,6 +5,7 @@
 //
 using UnityEngine;
 using System.Collections;
+#pragma warning disable CS0618 // Type or member is obsolete
 
 // 必要なコンポーネントの列記
 [RequireComponent(typeof (Animator))]
@@ -89,12 +90,13 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 			velocity *= backwardSpeed;	// 移動速度を掛ける
 		}
 		
-		if (Input.GetButtonDown("Jump")) {	// スペースキーを入力したら
+		if (Input.GetButtonDown("Jump")) {  // スペースキーを入力したら
 
-			//アニメーションのステートがLocomotionの最中のみジャンプできる
-			if (currentBaseState.nameHash == locoState){
-				//ステート遷移中でなかったらジャンプできる
-				if(!anim.IsInTransition(0))
+            //アニメーションのステートがLocomotionの最中のみジャンプできる
+            if (currentBaseState.nameHash == locoState)
+            {
+                              //ステート遷移中でなかったらジャンプできる
+                if (!anim.IsInTransition(0))
 				{
 						rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
 						anim.SetBool("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
@@ -206,3 +208,5 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 		col.center = orgVectColCenter;
 	}
 }
+ 
+#pragma warning restore CS0618 // Type or member is obsolete

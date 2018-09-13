@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class photonConnect : MonoBehaviour {
+#pragma warning disable CS0618 // Type or member is obsolete
 
 	public string versionName = "0.1";
 
@@ -34,10 +35,12 @@ public class photonConnect : MonoBehaviour {
 
 	private void OnDisconnectedFromPhoton(){
 
-		if (sectionView1.active)
-			sectionView1.SetActive (false);
+        if (sectionView1.active)
+        {
+            sectionView1.SetActive (false);
+        }
 
-		if (sectionView2.active)
+        if (sectionView2.active)
 			sectionView2.SetActive (false);
 
 		sectionView3.SetActive (true);
@@ -49,4 +52,5 @@ public class photonConnect : MonoBehaviour {
 
 
 
+#pragma warning restore CS0618 // Type or member is obsolete
 }
