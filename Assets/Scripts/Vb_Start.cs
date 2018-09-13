@@ -11,6 +11,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
     public GameObject canvas;
     public GameObject enemy;
     GameObject vbBtnStart;
+    GameObject vbBtnReStart;
     GameObject vbBtnExit;
     GameObject vbBtnYes;
     GameObject vbBtnNo;
@@ -19,6 +20,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
     GameObject exitNo;
     GameObject question;
     GameObject startbtn;
+    GameObject reStartbtn;
     GameObject stickControl;
     bool exit;
     bool start;
@@ -27,10 +29,10 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
     // Use this for initialization
     void Start () {
         stickControl = GameObject.Find("MoveStickControl");
-        startbtn = GameObject.Find("startBtn");
-        question = GameObject.Find("TxtExit");
         vbBtnStart = GameObject.Find("BtnStartGame");
         vbBtnStart.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+        vbBtnReStart = GameObject.Find("BtnReStartGame");
+        vbBtnReStart.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
         vbBtnExit = GameObject.Find("VirtualButtonQuit");
         vbBtnExit.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
         vbBtnYes = GameObject.Find("VirtualButtonQuitYes");
@@ -39,10 +41,14 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
         vbBtnNo.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
 
 
+        startbtn = GameObject.Find("startBtn");
+        reStartbtn = GameObject.Find("reStartBtn");
+        question = GameObject.Find("TxtExit");
         exitGame = GameObject.Find("ExitGame");
         exitYes = GameObject.Find("ExitYes");
         exitNo = GameObject.Find("ExitNo");
         startbtn.active = true;
+        reStartbtn.active = false;
         exitYes.active = false;
         exitNo.active = false;
         question.active = false;
@@ -67,17 +73,16 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-
+        Debug.Log(vb.gameObject.name);
 
 
         if (vb.gameObject.name == "BtnStartGame" && !start && !exit)
         {
             startbtn.active = false;
-            
         }
         if (vb.gameObject.name == "VirtualButtonQuit")
             exitGame.active = false;
-
+        
         if (vb.gameObject.name == "VirtualButtonQuitYes")
             exitYes.active = false;
 
@@ -86,12 +91,18 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
             exitYes.active = false;
             exitNo.active = false;
             question.active = false;
+            reStartbtn.active = false;
+        }
+        if (vb.gameObject.name == "BtnReStartGame" && start && exit)
+        {
+            Debug.Log("in");
+            reStartbtn.active = false;
         }
         
-    }
+    } 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        if (vb.gameObject.name == "BtnStartGame")
+        if (vb.gameObject.name == "BtnStartGame" && !start && !exit)
         {
             start = true;
             vbBtnStart.active = true;
@@ -101,14 +112,22 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
             enemy.active = true;
             
         }
-        if(vb.gameObject.name == "VirtualButtonQuit")
+        if (vb.gameObject.name == "BtnReStartGame" )
         {
+            if(start && exit)
+                Application.LoadLevel(Application.loadedLevel);
+        }
+        if (vb.gameObject.name == "VirtualButtonQuit")
+        { 
             exit = true;
             exitGame.active = true;
             exitYes.active = true;
             exitNo.active = true;
             question.active = true;
+            if(start)
+                reStartbtn.active = true;
 
+            
             startbtn.active = false;
             player.active = false;
             enemy.active = false;
@@ -128,6 +147,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
                 question.active = false;
                 exitYes.active = false;
                 exitNo.active = false;
+                reStartbtn.active = false;
                 exit = false;
 
                 if(start)
