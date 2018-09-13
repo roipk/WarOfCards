@@ -11,7 +11,10 @@ public class Hit : MonoBehaviour {
    
     private void OnTriggerEnter(Collider other)
     {
-        
+
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Untagged")
+            return;
+
         Animator enemyAnim = other.GetComponentInParent<Animator>();
         //Debug.Log(this.gameObject.tag + " attack  = " + !enemyAnim.GetBool("isAttack"));
 
@@ -32,6 +35,9 @@ public class Hit : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Untagged")
+            return;
+
         Animator enemyAnim = other.GetComponentInParent<Animator>();
         
 

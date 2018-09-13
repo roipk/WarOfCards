@@ -38,12 +38,14 @@ public class ControllerEnemy : MonoBehaviour {
             anim.SetBool("isIdle", false);
             return;
         }
-
+         
 
 
         if ((int)counter > 5)
         {
-            Destroy(this.gameObject);
+#pragma warning disable CS0618 // Type or member is obsolete
+            gameObject.active = false;
+#pragma warning restore CS0618 // Type or member is obsolete
             return;
         }
         else if (hp.transform.localScale.y<=0)
