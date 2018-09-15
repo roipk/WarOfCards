@@ -155,7 +155,7 @@ public class Vb_Start : MonoBehaviour , IVirtualButtonEventHandler
                     player.active = true;
                     enemy.active = true;
                     canvas.active = true;
-                    stickControl.active = false;
+                    stickControl.active = true;
                 }
                 else
                     startbtn.active = true;
