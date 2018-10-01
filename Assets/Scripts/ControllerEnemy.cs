@@ -7,6 +7,7 @@ public class ControllerEnemy : MonoBehaviour {
     static Animator anim;
     public Transform player;
     public GameObject hp;
+    public float speed = 0.2f;
 //    Rigidbody rb;
     //public GameObject character;
     bool attack = false;
@@ -85,14 +86,14 @@ public class ControllerEnemy : MonoBehaviour {
                // Debug.Log("in");
                 anim.SetBool("isWalking", false);
                 anim.SetBool("isAttack", false);
-                this.transform.Translate(0f, 0f, -0.05f);
+                this.transform.Translate(0f, 0f, -1*speed);
                 attack = false;
             }
 
            if (distane > 13f)
             {
                // Debug.Log("in distane > 13");
-                this.transform.Translate(0f, 0f, 0.05f);
+                this.transform.Translate(0f, 0f,speed);
                 anim.SetBool("isBack", false);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttack", false);
@@ -105,7 +106,7 @@ public class ControllerEnemy : MonoBehaviour {
 
                 //Debug.Log("in distane > 8");
                 //Debug.Log("in walke meter    " + relativePos.magnitude);
-                this.transform.Translate(0f, 0f, 0.05f);
+                this.transform.Translate(0f, 0f, speed);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttack", false);
                /* anim.SetBool("isIdle", false);

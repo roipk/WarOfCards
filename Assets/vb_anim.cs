@@ -16,7 +16,9 @@ public class vb_anim : MonoBehaviour , IVirtualButtonEventHandler {
     bool increas;
 
     void Start () {
-        
+#pragma warning disable CS0618 // Type or member is obsolete
+        g.active = true;
+#pragma warning restore CS0618 // Type or member is obsolete
         vbBtnObj = GameObject.Find("TestBtn");
         vbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
         btn = GameObject.Find("Test2Btn");
