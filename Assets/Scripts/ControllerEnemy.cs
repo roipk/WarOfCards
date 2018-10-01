@@ -75,7 +75,7 @@ public class ControllerEnemy : MonoBehaviour {
 
         
         anim.SetBool("isIdle", false);
-       // Debug.Log()
+        Debug.Log(transform.position);
         //Debug.Log("meter    " + Vector3.Distance(player.position, this.transform.position) + "        angle = " + angle);
         float distane = Vector3.Distance(player.position, this.transform.position);
         if (distane < 25f)
