@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr.aar\068201955068a739ef13c494b0de1f78\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="3c3b58094572bd9cc7a20c752e08897502036b14">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboard.aar\f98bb42159d1aa8de23f430b9314e5c9\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="9dbb83f0fca00962e516ec6a098b69c7a07d0bf8">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\jars\libs\VuforiaUnityPlayer.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="31de12dfd4ff409d57dd52142cd5ebe1c1eee803">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="89a665d716c3d6b2922d194ecd5aec7ae45beb3f">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\unity project\temp\Temp\gradleOut\libs\libprotobuf-java-nano.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="fcd53f117550c58490f29c2e27afca051626260d">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\unity project\temp\Temp\gradleOut\libs\unity-classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="899066780f9e638a5ff467fe1b01cb77fa0a8194">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="0e73b79f6ee536f7b2d00367f0a55dce11a3a61d">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="d46bca2836cb936675a51f8d54e3402015d835cb">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\jars\libs\Vuforia.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="400d0a4de54bb6b0263edf0f8338067b0671b95d">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\unitygvr.aar\000db475ecfccc9fc4cdef2ab82bedda\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.0"
+        sha1="36e70259b99d30e8bd89f2246a70d44a53cb309f">
+        <dex dex="E:\unity project\temp\Temp\gradleOut\build\intermediates\transforms\preDex\release\7.jar" />
+    </item>
+
+</items>

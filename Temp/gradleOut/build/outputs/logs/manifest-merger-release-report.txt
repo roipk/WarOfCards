@@ -1,0 +1,270 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+MERGED from [:gvr-keyboard:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboard.aar\f98bb42159d1aa8de23f430b9314e5c9\AndroidManifest.xml:2:1-11:12
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:2:1-31:12
+MERGED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:2:1-30:12
+MERGED from [:gvr:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr.aar\068201955068a739ef13c494b0de1f78\AndroidManifest.xml:2:1-9:12
+MERGED from [:unitygvr:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\unitygvr.aar\000db475ecfccc9fc4cdef2ab82bedda\AndroidManifest.xml:2:1-11:12
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:2:1-32:12
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+	package
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:70-100
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:101-147
+	android:versionCode
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-29:12
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:2:148-188
+supports-screens
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:3:3-163
+	android:largeScreens
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:3:78-105
+	android:smallScreens
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:3:21-48
+	android:normalScreens
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:3:49-77
+	android:xlargeScreens
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:3:106-134
+	android:anyDensity
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:3:135-160
+application
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:4:3-17:17
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:11:5-29:19
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:11:5-29:19
+MERGED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:11:5-28:19
+MERGED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:11:5-28:19
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:19:5-30:19
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:19:5-30:19
+	android:supportsRtl
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:4:48-80
+	android:debuggable
+		ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:19:18-44
+	android:allowBackup
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:4:16-47
+	android:banner
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:4:103-140
+	android:theme
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:4:141-179
+	android:isGame
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:4:81-102
+activity#com.unity3d.player.UnityPlayerActivity
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:5:5-12:16
+	android:screenOrientation
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:5:102-139
+	android:label
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:5:69-101
+	android:launchMode
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:5:140-171
+	android:hardwareAccelerated
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:5:354-389
+	android:configChanges
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:5:172-353
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:5:15-68
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER+com.google.intent.category.CARDBOARD
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:6:7-10:23
+action#android.intent.action.MAIN
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:7:9-61
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:7:17-58
+category#android.intent.category.LAUNCHER
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:8:9-69
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:8:19-66
+category#com.google.intent.category.CARDBOARD
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:9:9-73
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:9:19-70
+meta-data#unityplayer.UnityActivity
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:11:7-82
+	android:value
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:11:59-79
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:11:18-58
+meta-data#unityplayer.SkipPermissionsDialog
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:13:5-88
+	android:value
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:13:65-85
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:13:16-64
+meta-data#unity.build-id
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:14:5-101
+	android:value
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:14:46-98
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:14:16-45
+meta-data#unity.splash-mode
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:15:5-69
+	android:value
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:15:49-66
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:15:16-48
+meta-data#unity.splash-enable
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:16:5-75
+	android:value
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:16:51-72
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:16:16-50
+uses-feature#0x00020000
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:18:3-52
+	android:glEsVersion
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:18:17-49
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:19:3-78
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:19:20-75
+uses-permission#android.permission.INTERNET
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:20:3-65
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:14:5-67
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:20:20-62
+uses-permission#android.permission.CAMERA
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:21:3-63
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:15:5-65
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:15:5-65
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:21:20-60
+uses-feature#android.hardware.camera
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:22:3-83
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:12:5-60
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:12:5-60
+	android:required
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:22:56-80
+		MERGED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:22:56-80
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:22:17-55
+uses-feature#android.hardware.camera.autofocus
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:23:3-93
+	android:required
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:23:66-90
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:23:17-65
+uses-feature#android.hardware.camera.front
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:24:3-89
+	android:required
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:24:62-86
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:24:17-61
+uses-feature#android.hardware.sensor.accelerometer
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:25:3-97
+	android:required
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:25:70-94
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:25:17-69
+uses-feature#android.hardware.touchscreen
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:26:3-88
+	android:required
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:26:61-85
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:26:17-60
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:27:3-99
+	android:required
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:27:72-96
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:27:17-71
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:28:3-108
+	android:required
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:28:81-105
+	android:name
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml:28:17-80
+uses-sdk
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+MERGED from [:gvr-keyboard:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboard.aar\f98bb42159d1aa8de23f430b9314e5c9\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-keyboard:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboard.aar\f98bb42159d1aa8de23f430b9314e5c9\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr.aar\068201955068a739ef13c494b0de1f78\AndroidManifest.xml:5:5-7:41
+MERGED from [:gvr:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr.aar\068201955068a739ef13c494b0de1f78\AndroidManifest.xml:5:5-7:41
+MERGED from [:unitygvr:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\unitygvr.aar\000db475ecfccc9fc4cdef2ab82bedda\AndroidManifest.xml:7:5-9:41
+MERGED from [:unitygvr:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\unitygvr.aar\000db475ecfccc9fc4cdef2ab82bedda\AndroidManifest.xml:7:5-9:41
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:8:5-10:41
+MERGED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:8:5-10:41
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from E:\unity project\temp\Temp\gradleOut\src\main\AndroidManifest.xml
+activity#com.google.gvr.keyboardsupport.TransitionVRActivity
+ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:17:9-28:20
+	android:label
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:22:13-45
+	android:enableVrMode
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:20:13-106
+	android:exported
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:21:13-37
+	android:resizeableActivity
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:23:13-47
+	android:configChanges
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:19:13-100
+	android:name
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:18:13-79
+intent-filter#android.intent.category.LAUNCHER+com.google.intent.category.DAYDREAM
+ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:24:13-27:29
+category#com.google.intent.category.DAYDREAM
+ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:26:17-80
+	android:name
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\c49755cfb47bd9114f208293d96a9516\AndroidManifest.xml:26:27-77
+activity#com.google.gvr.permissionsupport.TransitionVRActivity
+ADDED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:17:9-27:20
+	android:label
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:22:13-45
+	android:enableVrMode
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:20:13-106
+	android:exported
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:21:13-37
+	android:configChanges
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:19:13-100
+	android:name
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\f5887daa2ef296468c61b2076f41a67e\AndroidManifest.xml:18:13-81
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:16:5-79
+	android:name
+		ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:16:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:17:22-78
+meta-data#com.google.ar.core
+ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:22:9-24:40
+	android:value
+		ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:23:13-46
+uses-library#com.osterhoutgroup.api.ext
+ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:27:9-29:40
+	android:required
+		ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [:VuforiaWrapper:] C:\Users\roipk\.gradle\caches\transforms-1\files-1.1\VuforiaWrapper.aar\ec6b2f619cc57ff4410f330f768f4217\AndroidManifest.xml:28:13-54

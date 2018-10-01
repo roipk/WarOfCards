@@ -1,0 +1,396 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-nostdlib
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+-r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.dll
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AudioModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.BaselibModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ClothModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.FacebookModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.TLSModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.TimelineModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UIModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UNETModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UmbraModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.VRModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.VideoModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.WindModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll"
+-r:"E:\Program Files\Unity\Editor\Data\Managed/Unity.Locator.dll"
+-r:"E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+-r:"E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"E:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll"
+-r:"E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
+-r:"E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
+-r:Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll
+-r:Assets/Plugins/Photon3Unity3D.dll
+-r:Assets/Plugins/WebSocket/websocket-sharp.dll
+-r:C:/Users/roipk/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
+-r:C:/Users/roipk/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Core.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.Lang.dll"
+-r:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\Boo.Lang.dll"
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2018_1_OR_NEWER
+-define:UNITY_2018_2_OR_NEWER
+-define:UNITY_2018_2_10
+-define:UNITY_2018_2
+-define:UNITY_2018
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_TEXTURE_STREAMING
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_MANAGED_JOBS
+-define:ENABLE_MANAGED_TRANSFORM_JOBS
+-define:ENABLE_MANAGED_ANIMATION_JOBS
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:INCLUDE_PUBNUB
+-define:ENABLE_VIDEO
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_ANDROID
+-define:UNITY_ANDROID
+-define:UNITY_ANDROID_API
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_EGL
+-define:ENABLE_NETWORK
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING
+-define:PLATFORM_SUPPORTS_ADS_ID
+-define:UNITY_CAN_SHOW_SPLASH_SCREEN
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_SPATIALTRACKING
+-define:ENABLE_UNITYADS_RUNTIME
+-define:UNITY_UNITYADS_API
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_UNITY_COLLECTIONS_CHECKS
+-define:ENABLE_BURST_AOT
+-define:UNITY_TEAM_LICENSE
+-define:CROSS_PLATFORM_INPUT
+-define:MOBILE_INPUT
+-define:UNITY_HAS_GOOGLEVR
+-define:UNITY_HAS_TANGO
+Assets/GoogleVR/Demos/Scripts/DemoInputManager.cs
+Assets/GoogleVR/Demos/Scripts/DemoSceneManager.cs
+Assets/GoogleVR/Demos/Scripts/HelloVR/HeadsetDemoManager.cs
+Assets/GoogleVR/Demos/Scripts/HelloVR/HelloVRManager.cs
+Assets/GoogleVR/Demos/Scripts/HelloVR/ObjectController.cs
+Assets/GoogleVR/Demos/Scripts/KeyboardDemo/KeyboardDelegateExample.cs
+Assets/GoogleVR/Demos/Scripts/PermissionsDemo/PermissionsFlowManager.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/AppButtonInput.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/AutoPlayVideo.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/InputEvents.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/MenuHandler.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/PositionSwapper.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/ScrubberEvents.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/SwitchVideos.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/ToggleAction.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/VideoControlsManager.cs
+Assets/GoogleVR/Demos/Scripts/VideoDemo/VideoPlayerReference.cs
+Assets/GoogleVR/Legacy/Scripts/Audio/GvrAudio.cs
+Assets/GoogleVR/Legacy/Scripts/Audio/GvrAudioListener.cs
+Assets/GoogleVR/Legacy/Scripts/Audio/GvrAudioRoom.cs
+Assets/GoogleVR/Legacy/Scripts/Audio/GvrAudioSoundfield.cs
+Assets/GoogleVR/Legacy/Scripts/Audio/GvrAudioSource.cs
+Assets/GoogleVR/Legacy/Scripts/GvrController.cs
+Assets/GoogleVR/Legacy/Scripts/GvrControllerVisualManager.cs
+Assets/GoogleVR/Legacy/Scripts/GvrPointerManager.cs
+Assets/GoogleVR/Scripts/Cardboard/GvrReticlePointer.cs
+Assets/GoogleVR/Scripts/Controller/ArmModel/GvrArmModel.cs
+Assets/GoogleVR/Scripts/Controller/ArmModel/GvrBaseArmModel.cs
+Assets/GoogleVR/Scripts/Controller/ArmModel/IGvrArmModelReceiver.cs
+Assets/GoogleVR/Scripts/Controller/GvrControllerInput.cs
+Assets/GoogleVR/Scripts/Controller/GvrControllerInputDevice.cs
+Assets/GoogleVR/Scripts/Controller/GvrControllerReticleVisual.cs
+Assets/GoogleVR/Scripts/Controller/GvrControllerVisual.cs
+Assets/GoogleVR/Scripts/Controller/GvrLaserPointer.cs
+Assets/GoogleVR/Scripts/Controller/GvrLaserVisual.cs
+Assets/GoogleVR/Scripts/Controller/GvrRecenterOnlyController.cs
+Assets/GoogleVR/Scripts/Controller/GvrTrackedController.cs
+Assets/GoogleVR/Scripts/Controller/IGvrControllerInputDeviceReceiver.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerProviderFactory.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerProviders/AndroidNativeControllerProvider.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerProviders/DummyControllerProvider.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerProviders/EditorControllerProvider.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerProviders/EmulatorControllerProvider.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerProviders/MouseControllerProvider.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerState.cs
+Assets/GoogleVR/Scripts/Controller/Internal/ControllerUtils.cs
+Assets/GoogleVR/Scripts/Controller/Internal/Emulator/EmulatorClientSocket.cs
+Assets/GoogleVR/Scripts/Controller/Internal/Emulator/EmulatorConfig.cs
+Assets/GoogleVR/Scripts/Controller/Internal/Emulator/EmulatorDataTypes.cs
+Assets/GoogleVR/Scripts/Controller/Internal/Emulator/EmulatorManager.cs
+Assets/GoogleVR/Scripts/Controller/Internal/Emulator/PhoneEvent.cs
+Assets/GoogleVR/Scripts/Controller/Internal/IControllerProvider.cs
+Assets/GoogleVR/Scripts/Controller/Tooltips/GvrControllerTooltipsSimple.cs
+Assets/GoogleVR/Scripts/Controller/Tooltips/GvrTooltip.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrBasePointer.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrBasePointerRaycaster.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrEventInterfacesExtension.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrExecuteEventsExtension.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrPointerGraphicRaycaster.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrPointerPhysicsRaycaster.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrPointerScrollInput.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrScrollSettings.cs
+Assets/GoogleVR/Scripts/EventSystem/GvrXREventsSubscriber.cs
+Assets/GoogleVR/Scripts/EventSystem/IGvrScrollSettings.cs
+Assets/GoogleVR/Scripts/EventSystem/InputModule/GvrAllEventsTrigger.cs
+Assets/GoogleVR/Scripts/EventSystem/InputModule/GvrEventExecutor.cs
+Assets/GoogleVR/Scripts/EventSystem/InputModule/GvrPointerInputModule.cs
+Assets/GoogleVR/Scripts/EventSystem/InputModule/GvrPointerInputModuleImpl.cs
+Assets/GoogleVR/Scripts/EventSystem/InputModule/IGvrEventExecutor.cs
+Assets/GoogleVR/Scripts/EventSystem/InputModule/IGvrInputModuleController.cs
+Assets/GoogleVR/Scripts/GvrCardboardHelpers.cs
+Assets/GoogleVR/Scripts/GvrEditorEmulator.cs
+Assets/GoogleVR/Scripts/GvrSettings.cs
+Assets/GoogleVR/Scripts/GvrUnitySdkVersion.cs
+Assets/GoogleVR/Scripts/Headset/GvrHeadset.cs
+Assets/GoogleVR/Scripts/Headset/GvrHeadsetEnums.cs
+Assets/GoogleVR/Scripts/Headset/Internal/HeadsetProviderFactory.cs
+Assets/GoogleVR/Scripts/Headset/Internal/HeadsetProviders/AndroidNativeHeadsetEnums.cs
+Assets/GoogleVR/Scripts/Headset/Internal/HeadsetProviders/AndroidNativeHeadsetProvider.cs
+Assets/GoogleVR/Scripts/Headset/Internal/HeadsetProviders/DummyHeadsetProvider.cs
+Assets/GoogleVR/Scripts/Headset/Internal/HeadsetProviders/EditorHeadsetProvider.cs
+Assets/GoogleVR/Scripts/Headset/Internal/HeadsetState.cs
+Assets/GoogleVR/Scripts/Headset/Internal/IHeadsetProvider.cs
+Assets/GoogleVR/Scripts/InstantPreview/InstantPreview.cs
+Assets/GoogleVR/Scripts/InstantPreview/InstantPreviewControllerProvider.cs
+Assets/GoogleVR/Scripts/InstantPreview/InstantPreviewHelper.cs
+Assets/GoogleVR/Scripts/Keyboard/GvrKeyboard.cs
+Assets/GoogleVR/Scripts/Keyboard/GvrKeyboardDelegateBase.cs
+Assets/GoogleVR/Scripts/Keyboard/GvrKeyboardIntent.cs
+Assets/GoogleVR/Scripts/Keyboard/Internal/IKeyboardProvider.cs
+Assets/GoogleVR/Scripts/Keyboard/Internal/KeyboardProviderFactory.cs
+Assets/GoogleVR/Scripts/Keyboard/Internal/KeyboardProviders/AndroidNativeKeyboardProvider.cs
+Assets/GoogleVR/Scripts/Keyboard/Internal/KeyboardProviders/DummyKeyboardProvider.cs
+Assets/GoogleVR/Scripts/Keyboard/Internal/KeyboardProviders/EmulatorKeyboardProvider.cs
+Assets/GoogleVR/Scripts/Keyboard/Internal/KeyboardState.cs
+Assets/GoogleVR/Scripts/Permissions/GvrPermissionsRequester.cs
+Assets/GoogleVR/Scripts/Pose3D.cs
+Assets/GoogleVR/Scripts/PropertyDrawers/GvrInfoDrawer.cs
+Assets/GoogleVR/Scripts/UI/GvrDropdown.cs
+Assets/GoogleVR/Scripts/Utilities/GvrActivityHelper.cs
+Assets/GoogleVR/Scripts/Utilities/GvrCursorHelper.cs
+Assets/GoogleVR/Scripts/Utilities/GvrDaydreamApi.cs
+Assets/GoogleVR/Scripts/Utilities/GvrIntent.cs
+Assets/GoogleVR/Scripts/Utilities/GvrMathHelpers.cs
+Assets/GoogleVR/Scripts/Utilities/GvrUIHelpers.cs
+Assets/GoogleVR/Scripts/Utilities/GvrVRHelpers.cs
+Assets/GoogleVR/Scripts/Video/GvrVideoPlayerTexture.cs
+Assets/LoginMenu/photonButtons.cs
+Assets/LoginMenu/photonConnect.cs
+Assets/LoginMenu/photonHandler.cs
+Assets/LoginMenu/photonUsernameRegister.cs
+Assets/Menu.cs
+Assets/MenuEnemy.cs
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/CustomTypes.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Enums.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Extensions.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/FriendInfo.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/GizmoType.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/LoadbalancingPeer.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonClasses.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonHandler.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonLagSimulationGui.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonPlayer.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonStatsGui.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonStreamQueue.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PingCloudRegions.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Room.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/RoomInfo.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/RPC.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/ServerSettings.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/SocketUdp.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/SocketWebTcp.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonAnimatorView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonRigidbody2DView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonRigidbodyView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewPositionControl.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewPositionModel.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewRotationControl.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewRotationModel.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewScaleControl.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewScaleModel.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ConnectAndJoinRandom.cs"
+"Assets/Photon Unity Networking/UtilityScripts/CullArea.cs"
+"Assets/Photon Unity Networking/UtilityScripts/InputToEvent.cs"
+"Assets/Photon Unity Networking/UtilityScripts/InRoomChat.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ManualPhotonViewAllocator.cs"
+"Assets/Photon Unity Networking/UtilityScripts/MoveByKeys.cs"
+"Assets/Photon Unity Networking/UtilityScripts/NetworkCullingHandler.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnClickDestroy.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnClickInstantiate.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnJoinedInstantiate.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnStartDelete.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PhotonPlayer/PlayerRoomIndexing.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PickupItem.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PickupItemSimple.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PickupItemSyncer.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PointedAtGameObjectInfo.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PunPlayerScores.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PunTeams.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PunTurnManager.cs"
+"Assets/Photon Unity Networking/UtilityScripts/QuitOnEscapeOrBack.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ShowStatusWhenConnecting.cs"
+"Assets/Photon Unity Networking/UtilityScripts/SmoothSyncMovement.cs"
+"Assets/Photon Unity Networking/UtilityScripts/SupportLogger.cs"
+"Assets/Photon Unity Networking/UtilityScripts/TimeKeeper.cs"
+"Assets/Photon Unity Networking/UtilityScripts/UI/ButtonInsideScrollList.cs"
+"Assets/Photon Unity Networking/UtilityScripts/UI/TextButtonTransition.cs"
+"Assets/Photon Unity Networking/UtilityScripts/UI/TextToggleIsOnTransition.cs"
+Assets/PhotonChatApi/ChatChannel.cs
+Assets/PhotonChatApi/ChatClient.cs
+Assets/PhotonChatApi/ChatDisconnectCause.cs
+Assets/PhotonChatApi/ChatEventCode.cs
+Assets/PhotonChatApi/ChatOperationCode.cs
+Assets/PhotonChatApi/ChatParameterCode.cs
+Assets/PhotonChatApi/ChatPeer.cs
+Assets/PhotonChatApi/ChatState.cs
+Assets/PhotonChatApi/ChatUserStatus.cs
+Assets/PhotonChatApi/IChatClientListener.cs
+Assets/Scripts/controller1.cs
+Assets/Scripts/ControllerEnemy.cs
+Assets/Scripts/HealthBar.cs
+Assets/Scripts/Hit.cs
+Assets/Scripts/JoyButton.cs
+Assets/Scripts/PlayerController.cs
+Assets/Scripts/Vb_Start.cs
+"Assets/Simple Health Bar/_Asteroids Example/Scripts/AsteroidController.cs"
+"Assets/Simple Health Bar/_Asteroids Example/Scripts/GameManager.cs"
+"Assets/Simple Health Bar/_Asteroids Example/Scripts/HealthPickupController.cs"
+"Assets/Simple Health Bar/_Asteroids Example/Scripts/PlayerController.cs"
+"Assets/Simple Health Bar/_Asteroids Example/Scripts/PlayerHealth.cs"
+"Assets/Simple Health Bar/Scripts/HP.cs"
+"Assets/Simple Health Bar/Scripts/SimpleHealthBar.cs"
+Assets/UnityChan/Scripts/CameraController.cs
+Assets/UnityChan/Scripts/FaceUpdate.cs
+Assets/UnityChan/Scripts/IdleChanger.cs
+Assets/UnityChan/Scripts/SceneLoader.cs
+Assets/UnityChan/Scripts/ThirdPersonCamera.cs
+Assets/UnityChan/Scripts/UnityChanControlScriptWithRgidBody.cs
+Assets/vb_anim.cs
+Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs
+Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs
+-lib:"E:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity"
